@@ -9,7 +9,24 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation-name: App-logo-spin;    
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  .App-logo[data-energy='true'] {
+    animation-play-state: running;
+  }
+  .App-logo[data-energy='false'] {
+    animation-play-state: paused;
+  }
+  .App-logo[data-velocity='slow'] {
+    animation-duration: 2s;
+  }
+  .App-logo[data-velocity='medium'] {
+    animation-duration: 1.5s;
+  }
+  .App-logo[data-velocity='fast'] {
+    animation-duration: 1s;
   }
 }
 
